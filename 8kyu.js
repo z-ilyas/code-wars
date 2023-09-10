@@ -171,3 +171,26 @@ function correct(string)
 // Best Answer
 
 correct = s => s.replace(/0/g,'O').replace(/1/g,'I').replace(/5/g,'S')
+
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+// For example, for [1, 2, 2] it should return 9 because 1 ^ 2 + 2 ^ 2 + 2 ^  2 = 9.
+
+function squareSum(numbers){
+  let total = 0;
+for(let num of numbers){
+ let sum = num ** 2
+   console.log (sum);
+  total += sum;
+    console.log(total);
+  }
+  return total;
+}
+
+// Best Answer
+
+function squareSum(numbers){
+  return numbers.reduce(function(sum, n){
+    return (n*n) + sum;
+  }, 0)
+}
