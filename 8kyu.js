@@ -209,5 +209,13 @@ function numberToString(num) {
   return num.toString();
 }
 
-// Best Answer
+// Write a function which converts the input string to uppercase.
+
+function makeUpperCase(str) {
+  return str.toUpperCase();
+}
+
+// Best Answer 
+
+const makeUpperCase = str => str.toUpperCase();
 
