@@ -283,3 +283,15 @@ function sumTwoSmallestNumbers(numbers){
   numbers = numbers.sort(function(a, b){return a - b; });
   return numbers[0] + numbers[1];
 };
+
+// Given an array of integers, return a new array with each value doubled.
+
+// For example:
+
+// [1, 2, 3] --> [2, 4, 6]
+
+function maps(x){
+  return x.map( num => num * 2);
+  }
+
+  
