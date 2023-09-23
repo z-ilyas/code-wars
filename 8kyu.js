@@ -420,4 +420,25 @@ function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
   return laLigaGoals + copaDelReyGoals +championsLeagueGoals;
 }
 
+// Write a function which calculates the average of the numbers in a given list.
 
+// Note: Empty arrays should return 0.
+
+function findAverage(arrays) {
+  let counter = 0;
+  for (let array of arrays){
+    counter += array;
+  }
+  let length = arrays.length;
+  if(arrays.length === 0){
+    return 0;
+  }else{
+  return counter/length;
+  }
+}
+
+// Best Answer
+
+var find_average = (array) => {  
+  return array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
+}
