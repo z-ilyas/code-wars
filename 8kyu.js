@@ -368,3 +368,40 @@ function litres(time) {
 }
 
 
+// This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+
+function simpleMultiplication(number) {
+  // your code........
+if(number % 2 === 0){
+  return number * 8;
+}else{
+  return number * 9
+}
+}
+
+// Best Answer 
+
+function simpleMultiplication(n) {
+  return n * (n % 2 ? 9 : 8);
+}
+
+// You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
+
+// Write a program that returns the girl's age (0-9) as an integer.
+
+// Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
+
+function getAge(inputString){
+  let s = inputString.split('');
+  return Number(s[0]);
+}
+
+// Best Answer
+
+function getAge(inputString){
+  return parseInt(inputString);
+}
+
+
+
+
