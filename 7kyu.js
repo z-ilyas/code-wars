@@ -161,4 +161,33 @@ function removeSmallest(numbers) {
   return result;
 }
 
+// This time no story, no theory. The examples below show you how to write function accum:
 
+// Examples:
+
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+
+// The parameter of accum is a string which includes only letters from a..z and A..Z.
+
+function accum(s) {
+	// your code
+//   Split each character in the strinng (done)
+//   Use index number + 1 to multiple each character in the string(done)
+//   Have the first latter in character as Capital
+//   Have - in between each character(done)
+let char = s.split('');
+    // console.log(char);
+let result = [];
+   for ( let i = 0; i < char.length; i++){
+        let letter = char[i];
+        let numberOfDublicates = i + 1;
+        let actualLetter = letter.toUpperCase();
+        letter = letter.toLowerCase();
+        let newLetter = letter.repeat(numberOfDublicates - 1);
+        result.push(actualLetter + newLetter);
+    }
+    let joinedResult = result.join('-')
+    return joinedResult;
+}
