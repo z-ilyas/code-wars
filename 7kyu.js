@@ -161,5 +161,4 @@ function removeSmallest(numbers) {
   return result;
 }
 
-// Best Answer
 
