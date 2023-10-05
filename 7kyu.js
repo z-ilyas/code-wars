@@ -191,3 +191,34 @@ let result = [];
     let joinedResult = result.join('-')
     return joinedResult;
 }
+
+
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+// Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+function reverseWords(str) {
+  // Go for it
+  let wordArray = str.split(' ');
+//   let new = split.reverse();
+  let reverseString = [];
+  for (let word of wordArray){
+    let letter = word.split('');
+    let reverseLetter = letter.reverse();
+    let reverseWord = reverseLetter.join('');
+    reverseString.push(reverseWord);
+  }
+  let reverseSentence = reverseString.join(' ');
+        console.log(reverseSentence);
+  return reverseSentence;
+}
+
+// Best Answer 
+
+function reverseWords(str) {
+  return str.split(' ').map(function(word){
+    return word.split('').reverse().join('');
+  }).join(' ');
+}
