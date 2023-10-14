@@ -248,3 +248,31 @@ function disemvowel(str) {
   return str.replace(/[aeiou]/gi, '');
 }
 
+// An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+// Example: (Input --> Output)
+
+// "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+
+// isIsogram "Dermatoglyphics" = true
+// isIsogram "moose" = false
+// isIsogram "aba" = false
+
+function isIsogram(str) {
+  const strLower = str.toLowerCase(); 
+  const seen = new Set();
+
+  for (let letter of strLower) {
+    if (seen.has(letter)) {
+      return false; 
+    }
+    seen.add(letter);
+  }
+
+  return true; 
+}
+
+// Best Answer
+function isIsogram(str){
+	return new Set(str.toUpperCase()).size == str.length;
+}
