@@ -566,3 +566,48 @@ function lovefunc(flower1, flower2){
 function lovefunc(flower1, flower2){
   return flower1 % 2 !== flower2 % 2;
 }
+
+
+// Write a function named setAlarm/set_alarm/set-alarm/setalarm (depending on language) which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+
+// The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+
+// employed | vacation 
+// true     | true     => false
+// true     | false    => true
+// false    | true     => false
+// false    | false    => false
+
+function setAlarm(employed, vacation){
+  if(employed === vacation) {
+    return false;
+  }else if(employed === true){
+    return true;
+  }else if(employed === false){
+    return false;
+  }
+
+}
+
+// Best Answer
+
+const setAlarm = (employed, vacation) => employed && !vacation;
+
+// Your function takes two arguments:
+
+// current father's age (years)
+// current age of his son (years)
+// Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old). 
+// The answer is always greater or equal to 0, no matter if it was in the past or it is in the future.
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  // your code here
+  let number = sonYearsOld * 2;
+  return Math.abs(dadYearsOld - number);
+}
+
+// Best Answer
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - 2 * sonYearsOld);
+}
