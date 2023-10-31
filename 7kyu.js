@@ -276,3 +276,30 @@ function isIsogram(str) {
 function isIsogram(str){
 	return new Set(str.toUpperCase()).size == str.length;
 }
+
+// Simple, given a string of words, return the length of the shortest word(s).
+
+// String will never be empty and you do not need to account for different data types.
+
+function findShort(s){
+  let words = s.split(" ");
+  let minCounter = 100;
+  for (let word of words){
+    let counter = 0;
+
+    for (let letter of word){
+      counter += 1;
+    }
+    if(counter < minCounter){
+      minCounter = counter;
+    }
+  }
+  console.log(minCounter);
+  return minCounter;
+}
+
+// Best Answer 
+
+function findShort(s){
+  return Math.min(...s.split(" ").map (s => s.length));
+}
